@@ -1,0 +1,14 @@
+import random
+
+# Ask for input and split the names by comma and space
+names_input = input("May I inquire about the names of individuals seated at your table, please? ")
+names_list = [name.strip() for name in names_input.split(",")]
+
+if len(names_list) == 0:
+    print("No names provided. Please enter at least one name.")
+else:
+    # Select a random name from the list
+    selected_name = random.choice(names_list)
+
+    # Print the selected name and message
+    print(f"{selected_name} is going to buy the meal today.")
